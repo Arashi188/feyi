@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Sales Analysis | Adebayo Omofeyi</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">AO<span class="accent">.</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#projects">← Back to Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="case-study section">
+        <header class="case-header">
+            <span class="project-tag">Sales Analytics</span>
+            <h1>Company Sales Performance: 500 Transactions</h1>
+            <p class="case-meta">Python · Pandas · Matplotlib · Business Analysis</p>
+        </header>
+
+        <section class="case-section">
+            <h2>The Business Problem</h2>
+            <p>
+                A mid-sized company provided 500 raw sales records spanning 2024–2026 across multiple 
+                departments, regions, and products. Leadership needed clarity on three questions:
+            </p>
+            <ul>
+                <li>Which regions and products are actually driving revenue?</li>
+                <li>Where are we missing targets by the largest margin?</li>
+                <li>Where should the sales team focus their effort next quarter?</li>
+            </ul>
+            <p>
+                The dataset was intentionally messy: inconsistent currency formatting, missing target values, 
+                and no pre-calculated performance metrics. The goal was not just to visualize the data, 
+                but to produce a decision-ready recommendation.
+            </p>
+        </section>
+
+        <section class="case-section">
+            <h2>My Approach</h2>
+            <h3>1. Data Cleaning & Validation</h3>
+            <p>
+                I loaded the CSV into Pandas and performed an initial audit. Key cleaning steps included:
+            </p>
+            <ul>
+                <li>Standardizing column names (e.g., <code>units_price</code> → <code>Unit_Price</code>)</li>
+                <li>Verifying <code>Revenue = Units_Sold × Unit_Price</code> to catch calculation errors</li>
+                <li>Handling missing <code>Target</code> values by flagging them for review</li>
+                <li>Ensuring all years fell within the expected 2024–2026 range</li>
+            </ul>
+
+            <h3>2. Exploratory Analysis</h3>
+            <p>
+                I grouped performance by <strong>Region</strong> and <strong>Product</strong>, calculating:
+            </p>
+            <ul>
+                <li>Total revenue per region</li>
+                <li>Average target attainment rate (<code>Revenue / Target</code>)</li>
+                <li>Top and bottom performing product categories</li>
+                <li>Year-over-year revenue trends</li>
+            </ul>
+
+            <h3>3. Gap Analysis</h3>
+            <p>
+                I created a <code>Target_Gap</code> column (<code>Revenue − Target</code>) to identify 
+                which departments were furthest from their goals. This surfaced a pattern: 
+                <strong>Finance and Procurement consistently underperformed</strong> relative to Sales and IT, 
+                despite similar unit volumes.
+            </p>
+        </section>
+
+        <section class="case-section">
+            <h2>Key Findings</h2>
+            <div class="findings-grid">
+                <div class="finding">
+                    <span class="finding-number">North</span>
+                    <p>Highest total revenue region, but also the highest target variance.</p>
+                </div>
+                <div class="finding">
+                    <span class="finding-number">Product D</span>
+                    <p>Top revenue driver, but margins varied significantly by region.</p>
+                </div>
+                <div class="finding">
+                    <span class="finding-number">Finance</span>
+                    <p>Largest average gap between actual revenue and target.</p>
+                </div>
+            </div>
+            <p>
+                The analysis revealed that <strong>targets were not evenly calibrated across regions</strong>. 
+                North and West regions received disproportionately high targets relative to their historical 
+                unit volumes, creating a structural disadvantage for those teams.
+            </p>
+        </section>
+
+        <section class="case-section">
+            <h2>Business Recommendation</h2>
+            <p>Based on the findings, I recommended a three-part action plan:</p>
+            <ol>
+                <li>
+                    <strong>Re-baseline targets by region.</strong> Use the 2024–2025 average revenue 
+                    as the baseline for 2026 targets, rather than applying uniform percentage increases.
+                </li>
+                <li>
+                    <strong>Investigate Finance's performance gap.</strong> The data suggests a possible 
+                    product mix issue—Finance sold disproportionately more low-price items. A targeted 
+                    product training session could address this.
+                </li>
+                <li>
+                    <strong>Double down on North region.</strong> Despite missing targets, North generated 
+                    the most revenue. Additional sales headcount there has the highest expected ROI.
+                </li>
+            </ol>
+        </section>
+
+        <section class="case-section">
+            <h2>Tools & Techniques</h2>
+            <div class="project-meta">
+                <span>Python 3</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Jupyter Notebook</span>
+            </div>
+            <p class="case-note">
+                <strong>Note:</strong> The full notebook and CSV file are available in the 
+                <a href="https://github.com/0fey001" target="_blank">GitHub repository</a>. 
+                You can reproduce every step of this analysis.
+            </p>
+        </section>
+
+    </article>
+
+    <footer class="footer">
+        <p>© Adebayo Omofeyi · <a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>

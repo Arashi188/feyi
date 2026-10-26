@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="800" height="500" fill="#0A1F3D"/>
+  <rect x="40" y="40" width="720" height="420" rx="12" fill="#0D2747" stroke="#2c4b78" stroke-width="2"/>
+  <g fill="#12325E" stroke="#2c4b78">
+    <rect x="90" y="300" width="80" height="120" rx="6"/>
+    <rect x="210" y="240" width="80" height="180" rx="6"/>
+    <rect x="330" y="270" width="80" height="150" rx="6"/>
+    <rect x="450" y="170" width="80" height="250" rx="6"/>
+  </g>
+  <rect x="570" y="120" width="80" height="300" rx="6" fill="#14B8A6"/>
+  <path d="M130 270 L250 210 L370 235 L490 145 L610 95" fill="none" stroke="#2DD4BF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="270" r="7" fill="#2DD4BF"/>
+  <circle cx="250" cy="210" r="7" fill="#2DD4BF"/>
+  <circle cx="370" cy="235" r="7" fill="#2DD4BF"/>
+  <circle cx="490" cy="145" r="7" fill="#2DD4BF"/>
+  <circle cx="610" cy="95" r="7" fill="#2DD4BF"/>
+  <text x="400" y="80" fill="#cbd8e8" font-family="'Source Sans 3', sans-serif" font-size="22" font-weight="600" text-anchor="middle">Project Dashboard Preview</text>
+  <text x="400" y="445" fill="#a9bad0" font-family="'Source Sans 3', sans-serif" font-size="15" text-anchor="middle">Place your screenshot at assets/images/ to replace this graphic</text>
+</svg>
